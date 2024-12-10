@@ -60,7 +60,7 @@ function checkAns(idx) {
             setTimeout(levelUp, 1000); 
         }
     }else{
-        h3.innerHTML =`Game Over ! Your Score was <b>${level}</b> <br>Press Any key To Start Game Again`; 
+        h3.innerHTML =`Game Over ! Your Score was <b>${level}</b> <br>Press Any key or Tap Any where To Start Game Again`; 
         document.querySelector("body").style.backgroundColor="red";
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor="white";
