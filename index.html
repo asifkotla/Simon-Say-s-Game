@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simons Say's Game</title>
+    <title>Simon's Says Game</title>
     <link rel="stylesheet" href="style.css">
- 
 </head>
 <body>
-    <h1>Simon  Game</h1>
-    <h3>Press Any Key To Start The Game</h3>
+    <h1>Simon Game</h1>
+    <h3 id="instruction">Press Any Key To Start The Game</h3>
     <div class="btn-container">
         <div class="line1">
             <div class="btn red" type="button" id="red"></div>
-            <div class="btn blue" type="button"id="blue"></div>
+            <div class="btn blue" type="button" id="blue"></div>
         </div>
         <div class="line2">
             <div class="btn green" type="button" id="green"></div>
@@ -21,6 +20,13 @@
         </div>
     </div>
     <p id="score"> Highest Score = 0</p>
+    <script>
+        // Dynamically change instruction for mobile devices
+        const instruction = document.getElementById("instruction");
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+            instruction.textContent = "Tap Anywhere To Start The Game";
+        }
+    </script>
     <script src="app.js"></script>
 </body>
 </html>
