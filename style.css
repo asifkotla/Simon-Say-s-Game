@@ -7,8 +7,8 @@ body {
 }
 
 .btn {
-    height: 20vw; /* Scales with the viewport width */
-    width: 20vw;
+    height: 15vw; /* Scales with the viewport width */
+    width: 15vw;
     border: 0.5vw solid black;
     border-radius: 20%;
     margin: 2vw;
@@ -37,7 +37,7 @@ body {
     background-color: white;
 }
 #score {
-    font-size: 5vw;
+    font-size: 2vw;
     font-family:Arial, Helvetica, sans-serif;
     color:black;
 }
