@@ -1,5 +1,4 @@
-alert("Instructions:\n1. Observe the sequence of flashing colors.\n2. Click the colors in the same order as they flashed.");
-
+alert("Instructions \n,1.See the Squeence of Flashing of Colors,\n '2.Click Color In Same Sequence which has Shown Previously'");
 
 let gameSeq=[]; 
 let userSeq=[];  
@@ -10,29 +9,29 @@ let level=0;
 
 let highestscore=0;
 
-let h3=document.querySelector('h3');
-
-//---------------------------------------------------------------
-
-document.addEventListener("click", startGame);
-document.addEventListener("touchstart", startGame);
-
-function startGame() {
+// Handle mobile tap to start game
+function handleMobileStart() {
     if (!started) {
-        console.log("Game Is Started");
+        console.log("Mobile Start Triggered");
         started = true;
         levelUp();
     }
 }
-//----------------------------------------------------------------
 
-document.addEventListener("keypress", function(){
-if (started==false) {
-    console.log("Game Is Started");
-    started=true;
-    levelUp();
+let h3=document.querySelector('h3');
+if (/Mobi|Android/i.test(navigator.userAgent)) {
+    console.log("Mobile Device Detected");
+    document.addEventListener("touchstart", handleMobileStart);
+} else {
+    // Key press handling for non-mobile devices
+    document.addEventListener("keypress", function () {
+        if (!started) {
+            console.log("Game Is Started via keypress");
+            started = true;
+            levelUp();
+        }
+    });
 }
-});
 
 function btnFlash(btn){
     btn.classList.add("flash");
@@ -70,7 +69,7 @@ function checkAns(idx) {
         if (level > highestscore) {
             highestscore = level;
             let b = document.querySelector('#score');
-            b.innerHTML = `<b>Highest score: ${highestscore}</b>`;
+            b.innerHTML = `<b>Highest score = ${highestscore}</b>`;
         }
         reset();
         
