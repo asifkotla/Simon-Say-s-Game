@@ -1,4 +1,4 @@
-alert("Instructions \n,1.See the Squeence of Flashing of Colors,\n '2.Click Color In Same Sequence which has Shown Previously'");
+alert("Instructions:\n1. Observe the sequence of flashing colors.\n2. Click the colors in the same order as they flashed.");
 
 let gameSeq=[]; 
 let userSeq=[];  
