@@ -7,7 +7,7 @@ body {
 }
 
 .btn {
-    height: 20vw; 
+    height: 20vw; /* Scales with the viewport width */
     width: 20vw;
     border: 0.5vw solid black;
     border-radius: 20%;
@@ -16,7 +16,7 @@ body {
 
 .btn-container {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Allows buttons to wrap */
     justify-content: center;
     align-items: center;
 }
@@ -38,6 +38,6 @@ body {
 }
 #score {
     font-size: 5vw;
-    font-family: cursive;
-    color: blueviolet;
+    font-family:Arial, Helvetica, sans-serif;
+    color:black;
 }
