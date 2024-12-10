@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>Simon Game</h1>
-    <h3 id="instruction">Press Any Key To Start The Game</h3>
+    <h2></h2>
+    <h3 id="instruction">TAP any where /Press any key To Start The Game</h3>
     <div class="btn-container">
         <div class="line1">
             <div class="btn red" type="button" id="red"></div>
@@ -20,13 +21,7 @@
         </div>
     </div>
     <p id="score"> Highest Score = 0</p>
-    <script>
-        // Dynamically change instruction for mobile devices
-        const instruction = document.getElementById("instruction");
-        if (/Mobi|Android/i.test(navigator.userAgent)) {
-            instruction.textContent = "Tap Anywhere To Start The Game";
-        }
-    </script>
+
     <script src="app.js"></script>
 </body>
 </html>
